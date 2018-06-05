@@ -21,4 +21,4 @@ class CeleryRun(Command):
             return
         print 'Running %s with kwargs %s' % (task, task_kwargs)
         self.app.tasks[task](**task_kwargs)
-        print 'Task %s successfully ran'
+        print 'Task %s successfully ran' % task
