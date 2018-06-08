@@ -17,7 +17,7 @@ class CeleryRun(Command):
         try:
             task_kwargs = json.loads(task_kwargs)
         except ValueError:
-            print "%s was not parsed as json" % task_kwargs
+            print("%s was not parsed as json" % task_kwargs)
             return
         print('Running %s with kwargs %s' % (task, task_kwargs))
         self.app.tasks[task](**task_kwargs)
